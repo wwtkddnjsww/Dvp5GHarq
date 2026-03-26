@@ -37,59 +37,7 @@ Once you build in your local repository, you don't need to configure
 
 
 
-## Changed files
-
-Main changes are designated as 
-''Function (Line numbers)'' or describing part of the implementation.
-Major and minor changes are classified according to "Reflected on the code" and "Currently not used"
-
-### Packet Duplications
-This packet duplication is similar to the repetition type A.
-- Major: [/src/network/model/packet-tag-list.cc](/src/network/model/packet-tag-list.cc)
-Function (261~279): PacketTagList::Add() const 
-Assertion of Duplicated packet has been commented
-
-- Minor: [/src/lte/model/pdcp-tag.cc](/src/lte/model/pdcp-tag.cc) and [/src/lte/model/pdcp-tag.h](/src/lte/model/pdcp-tag.h)
-The timestamp variables are added for duplicated packets (but not used currently).
-```
-Time m_senderTimestampFordup; // This value was used to check duplicated time.
-Void PdcpTag::SetSTforDup (Time timestamp); // This timestamp function was for the duplicated packet
-```
-
-- Major: [/src/lte/model/pdcp.cc](/src/lte/model/pdcp.cc) and [/src/lte/model/pdcp.h](/src/lte/model/pdcp.h) 
-
-The logics of packet reception in PDCP layer has been changed due to the packet duplication
-```
-uint16_t pdcpSequenceNumbers[5000]; // This value is defined in order to classify the packet having the same sequence number (Discarding duplicated packets).
-Void LtePdcp::DoTransmitPdcpSdu (LtePdcpSapProvider::TransmitPdcpSduParameters params); // This function logic has been changed in order to send packets according to the number of duplications
-
-
-//Following two values can be set in the scenario files.
-Please see [/contrib/nr/examples/siemens-urllc-simulation.cc](/contrib/nr/examples/siemens-urllc-simulation.cc)
-uint8_t m_maxDup = 0; //The value is for the number of duplications
-uint8_t m_dupDelay = 2; //The value is for the gap between the same packets. (For example, it will send every 2 ms until reaching max number of  duplications)
-```
-
-### Link Adaptation
-- Major: [/contrib/nr/model/nr-amc.cc](/contrib/nr/model/nr-amc.cc) and [/contrib/nr/model/nr-amc.h](/contrib/nr/model/nr-amc.h)
-The main changes of the code is in order to introduce the different target error rate settings.
-This is reflected only on EESM model not on Shannon model.
-```
-//Introduced new variable is 
-double m_targetErrorRate; //this variable is reflected on the functions in NrAmc class.
-```
-
-### Etc.
-
-#### Grid scenario helper
-- Major: [/contrib/nr/helper/grid-scenario-helper.cc](/contrib/nr/helper/grid-scenario-helper.cc) and [/contrib/nr/helper/grid-scenario-helper.h](/contrib/nr/helper/grid-scenario-helper.h)
-The main changes in grid scenraio is to introduce the fixed position according to the input
-
-### Saving measured UDP packet delay into a txt file
-- Minor: [/src/applications/model/udp-server.cc](/src/applications/model/udp-server.cc) and [/src/applications/model/udp-server.h](/src/applications/model/udp-server.h)
-The main change is the saving function has been implemented to save as txt file (in order to save packet delay).
-Currently not used.
-
+To be described
 
 
 
