@@ -10,7 +10,7 @@ Please refer to the following links
 #### 1. go to the path
 For example
 ```
-cd ~/Desktop/5g-urllc-simulation
+cd ~/To/Your/Path/Dvp5GHarq
 ```
 
 #### 2. configure for simulations
@@ -27,7 +27,7 @@ cd ~/Desktop/5g-urllc-simulation
 
 #### 4. run our simulation scenario
 ```
-./ns3 run siemens-urllc-scenario
+./ns3 run dvp
 ```
 
 Once you build in your local repository, you don't need to configure 
