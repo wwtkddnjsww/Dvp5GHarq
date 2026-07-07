@@ -26,8 +26,14 @@ cd ~/To/Your/Path/Dvp5GHarq
 ```
 
 #### 4. run our simulation scenario
+- Single Scenario
 ```
 ./ns3 run dvp
+```
+
+- For all simulations
+```
+sh script_orig.sh
 ```
 
 Once you build in your local repository, you don't need to configure 
