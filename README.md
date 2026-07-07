@@ -33,12 +33,9 @@ cd ~/To/Your/Path/Dvp5GHarq
 Once you build in your local repository, you don't need to configure 
 
 
-## 5G NR Implmenetations
+## 5G DVP Implmenetations
 
-
-
-To be described
-
+For detailed simulation setup, please refer to ``scratch/dvp/dvp.cc'' and ``script_orig.sh'' 
 
 
 ## Getting started
