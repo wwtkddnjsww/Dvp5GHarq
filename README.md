@@ -35,7 +35,7 @@ Once you build in your local repository, you don't need to configure
 
 ## 5G DVP Implmenetations
 
-For detailed simulation setup, please refer to ``scratch/dvp/dvp.cc'' and ``script_orig.sh'' 
+For detailed simulation setup, please refer to ``scratch/dvp/dvp.cc`` and ``script_orig.sh`` 
 
 
 ## Getting started
