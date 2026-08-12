@@ -4,7 +4,7 @@ set -euo pipefail
 sinr_list=(10)
 par_list=(3)
 srs_list=(80)
-mcs_list=(5 4 3 2 1)  
+mcs_list=(20 14 12 9 8 7 6 5 4 3 2 1)
 
 for sinr in "${sinr_list[@]}"; do
   for par in "${par_list[@]}"; do
