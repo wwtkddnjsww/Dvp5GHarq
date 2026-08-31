@@ -96,7 +96,7 @@ main(int argc, char* argv[])
     bool isHarqEnabled = true;
     bool isRandomPosition = false;
     bool isFadingEnabled = true;
-    uint8_t maxHarqNum = 4;
+    uint8_t maxHarqNum = 16;
     std::string schedulerType = "ns3::NrMacSchedulerOfdmaRR"; // RR, MR, PF, Edf, Qos
     //CA duplication only use this value
     bool caDuplication = false;
